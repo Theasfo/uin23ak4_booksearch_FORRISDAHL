@@ -1,33 +1,27 @@
 import React, {useState} from "react";
 
-export const SearchBar = ({setResults}) => {
-    const [input, setInput] = useState("");
+const SearchBar = ({onSearch}) => {
+    const [searchTerm, setSearchTerm] = useState('');
 
-    const fetchData = (value) => {
-        fetch("https://openlibrary.org/search.json?q=James+bond").then
-        ((response) => response.json()).then
-        ((json) => {
-            const results = json.filter((book) => {
-                return (
-                    title
-                ) 
-            })
-             
-            
-            });
+    const handleChange = (e) => {
+        setSearchTerm(e.target.value);
     }
 
-    const handleChange = (value) => {
-        setInput (value)
-        fetchData(value)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSearch(searchTerm);
     }
 
-    return (
-    <div className="input-wrapper">
-        <input placeholder="Søk..."
-        value={input}
-        onChange={(e) => handleChange(e.target.value)}
-        />
-    </div>
+    return(
+        <form onSubmit={handleSubmit}>
+            <input
+            type="text"
+            placeholder="Søk etter bok..."
+            value={searchTerm}
+            onChange={handleChange}/>
+            <button type="submit">Søk</button>
+        </form>
     )
 }
+
+export default SearchBar

@@ -1,18 +1,15 @@
-// Layout.js
-import React from 'react';
+import React from "react";
 
-function Layout({ children }) {
+const Layout = ({children}) => {
   return (
     <div className="layout">
       <header>
-        <h1>James Bond Books</h1>
+        <h1>James Bond bøker</h1>
       </header>
-      <main>
-        {children}
-      </main>
-      <footer>
-        <p>© 2024 James Bond Books</p>
-      </footer>
+      <main>{children}</main>
+      <footer>Bok søk</footer>
     </div>
-  );
+  )
 }
+
+export default Layout
