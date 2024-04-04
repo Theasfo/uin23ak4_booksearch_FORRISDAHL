@@ -49,7 +49,7 @@ const App = () => {
       <div className="search-container">
         <input
           type="text"
-          placeholder="Søk..."
+          placeholder="Søk etter bok..."
           value={searchTerm}
           onChange={(e) => handleSearch(e.target.value)}
         />
