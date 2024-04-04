@@ -11,7 +11,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('https://openlibrary.org/search.json?q=James+bond')
+    fetch('https://openlibrary.org/search.json?title=James+bond')
       .then((response) => response.json())
       .then((data) => {
         setSearchResults(data.docs);
@@ -36,7 +36,8 @@ const App = () => {
           book.author_name.some((author) =>
             author.toLowerCase().includes(searchTerm.toLowerCase())
           )) ||
-        String(book.first_publish_year).includes(searchTerm)
+        String(book.first_publish_year).includes(searchTerm) ||
+        String(book.average_rating).includes(searchTerm)
     );
     setFilteredResults(filtered);
   };

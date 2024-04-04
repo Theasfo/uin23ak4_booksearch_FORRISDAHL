@@ -7,7 +7,7 @@ const SearchResults = ({results}) => {
             {results.map((book) => (
                 <Bookcard key={book.key} book={book}/>
             ))}
-        </div>
+        </div> 
     )
 }
 
