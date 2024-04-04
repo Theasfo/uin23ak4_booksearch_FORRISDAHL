@@ -7,7 +7,7 @@ const Layout = ({children}) => {
         <h1>James Bond bøker</h1>
       </header>
       <main>{children}</main>
-      <footer>Bok søk</footer>
+      <footer>Bok søk 2024</footer>
     </div>
   )
 }
