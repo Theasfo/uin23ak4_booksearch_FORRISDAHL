@@ -11,7 +11,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('https://openlibrary.org/search.json?title=James+bond')
+    fetch('https://openlibrary.org/search.json?title=james+bond')
       .then((response) => response.json())
       .then((data) => {
         setSearchResults(data.docs);

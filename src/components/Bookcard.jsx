@@ -4,12 +4,12 @@ const BookCard = ({ book }) => {
     const { title, first_publish_year, author_name, key: bookId, cover_i, id_amazon, ratings_average } = book;
     const coverImageUrl = cover_i ? `https://covers.openlibrary.org/b/id/${cover_i}-M.jpg` : '/path/to/default/image.jpg'; 
 
-    // Amazon URL
-    const amazonSearchUrl = `https://www.amazon.com/s?k=${id_amazon}`;
+    // Amazon URL, men det finnes ingen ting under id_amazon i apiet
+    const amazonSearchUrl = `https://www.amazon.com/s?k=${encodeURIComponent(book.title + " book")}`;
     console.log("id: ", id_amazon)
     return (
         <div className="book-card">
-            <img src={coverImageUrl} alt={title} />
+            <img src={coverImageUrl} alt={"Bilde ikke tilgjengelig"} />
             <h3>{title}</h3>
             <li>Forfatter: {author_name?.join(', ')}</li>
             <li>Første utgivelsesår: {first_publish_year}</li>
