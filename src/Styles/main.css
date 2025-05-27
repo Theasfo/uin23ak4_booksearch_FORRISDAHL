@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap");
 .book-card {
   width: 150px;
   display: flex;
@@ -7,10 +9,13 @@
   background-color: #f9f9f9;
   border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Akshar", sans-serif;
+  font-optical-sizing: auto;
 }
 .book-card h3 {
   font-size: smaller;
   color: black;
+  font-weight: 500;
 }
 .book-card li {
   font-size: small;
@@ -20,18 +25,25 @@
   text-align: left;
   border-top-style: solid;
   border-color: gray;
+  font-weight: 400;
 }
 .book-card a {
   background-color: #cddfff;
   border-radius: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #646cff;
   text-decoration: inherit;
   padding: 1rem;
-  font-weight: 600;
+  margin-top: auto;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.book-card a:hover {
+  transform: scale(1.05);
+  background-color: #b0d4ff;
 }
 
 .book-card img {
+  color: black;
   width: 100%;
   height: auto;
 }
@@ -47,7 +59,7 @@ header {
   width: 100%;
 }
 header h1 {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 footer {
@@ -60,9 +72,12 @@ input[type=text i] {
   color: black;
   background-color: white;
   border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 2px;
+  font-family: "Akshar", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 body {
-  background-color: rgb(203, 216, 227);
+  background-color: rgb(147, 151, 179);
 }/*# sourceMappingURL=main.css.map */

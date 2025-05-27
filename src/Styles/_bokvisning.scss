@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap');
 
 .book-card {
     width: 150px;
@@ -9,12 +9,16 @@
     background-color: #f9f9f9;
     border-radius: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Akshar", sans-serif;
+    font-optical-sizing: auto;
 
-    h3{
+    h3 {
         font-size: smaller;
         color: black;
+        font-weight: 500;
     }
-    li{
+
+    li {
         font-size: small;
         margin: 0px;
         padding: 3px;
@@ -22,16 +26,23 @@
         text-align: left;
         border-top-style: solid;
         border-color: gray;
+        font-weight: 400;
     }
 
-    a{
+    a {
         background-color: #cddfff;
-    border-radius: 2rem;
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-    padding: 1rem;
-    font-weight: 600;
+        border-radius: 2rem;
+        font-weight: 600;
+        color: #646cff;
+        text-decoration: inherit;
+        padding: 1rem;
+        margin-top: auto;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: #b0d4ff;
+        }
     }
 }
 
@@ -41,7 +52,7 @@
     height: auto;
 }
 
-.search-results{
+.search-results {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
